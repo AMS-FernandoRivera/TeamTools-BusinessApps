@@ -1,7 +1,7 @@
 @ECHO OFF
 SETLOCAL
 cls
-@TITLE -- AMS_UpdateAzureDetailsTool --
+@TITLE -- AMS_UpdateUsersTool --
 
 :: Check for PowerShell executable
 IF NOT EXIST "%SYSTEMROOT%\system32\windowspowershell\v1.0\powershell.exe" (
@@ -35,8 +35,8 @@ IF %ERRORLEVEL% NEQ 0 (
 )
 
 :: Launch the PowerShell script
-ECHO - Starting AMS_UpdateAzureDetailsTool...
-PowerShell -NoExit -ExecutionPolicy Bypass -File "%~dp0AMS_UpdateAzureDetailsTool.ps1"
+ECHO - Starting AMS_UpdateUsersTool...
+PowerShell -NoExit -ExecutionPolicy Bypass -File "%~dp0AMS_UpdateUsersTool.ps1"
 
 GOTO END
 

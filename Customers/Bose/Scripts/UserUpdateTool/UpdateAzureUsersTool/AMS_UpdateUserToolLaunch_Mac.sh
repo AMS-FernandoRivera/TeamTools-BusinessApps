@@ -2,7 +2,7 @@
 
 # Clear the terminal and set a title
 clear
-echo "======== AMS_UpdateAzureDetailsTool ========"
+echo "======== AMS_UpdateUsersTool ========"
 
 # Check for PowerShell executable
 if ! command -v pwsh &> /dev/null; then
@@ -30,9 +30,9 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 # Launch the PowerShell script
-echo "Starting AMS_UpdateAzureDetailsTool..."
+echo "Starting AMS_UpdateUsersTool..."
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-pwsh -NoExit -ExecutionPolicy Bypass -File "$SCRIPT_DIR/AMS_UpdateAzureDetailsTool.ps1"
+pwsh -NoExit -ExecutionPolicy Bypass -File "$SCRIPT_DIR/AMS_UpdateUsersTool.ps1"
 
 echo "======== Script Execution Complete ========"
 exit
